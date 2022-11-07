@@ -13,4 +13,5 @@ urlFragment: fundamentals-shell
 # Shell.TabBarIsVisible="False" bug
 
 Sample of code where Shell.TabBarIsVisible="False" is ignored.
+
 Shell.FlyoutItemIsVisible="False" works fine.
