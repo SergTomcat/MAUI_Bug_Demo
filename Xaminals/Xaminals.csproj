@@ -61,6 +61,7 @@
 	  <None Remove="Resources\Images\paw.png" />
 	  <None Remove="Resources\Images\photo.jpg" />
 	  <None Remove="Resources\Images\random.png" />
+	  <None Remove="Resources\Images\tile.svg" />
 	  <None Remove="Resources\Images\xamarinstore.jpg" />
 	</ItemGroup>
 
@@ -111,6 +112,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\GeneralAnimalPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\TilePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

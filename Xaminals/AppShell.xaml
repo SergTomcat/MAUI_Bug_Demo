@@ -209,6 +209,11 @@
                       Icon="bear.png"
                       Shell.TabBarIsVisible="False"
                       ContentTemplate="{DataTemplate views:BearsPage}" />
+		<ShellContent Route="tiles"
+                      Title="Tile view"
+                      Icon="tile.png"
+                      Shell.TabBarIsVisible="False"
+                      ContentTemplate="{DataTemplate views:TilePage}" />
 	</FlyoutItem>
 
      <!--
