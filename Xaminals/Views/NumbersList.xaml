@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xaminals.Views.NumbersList"
+			 xmlns:c="clr-namespace:Xaminals.Converters"
+             Title="NumbersList">
+			 <ContentPage.Resources>
+	<ResourceDictionary>
+		<c:NumberToImageConverter x:Key="ToImage" />
+	</ResourceDictionary>
+		
+	</ContentPage.Resources>
+	<Grid VerticalOptions="FillAndExpand" ColumnDefinitions="*,*">
+		<!--ItemTemplate="{StaticResource MessageTemplateSelector}" -->
+		<CollectionView ItemsSource="{Binding NumbersArray}" VerticalOptions="FillAndExpand" Grid.Column="0">
+			<!--<CollectionView.ItemsLayout>
+				<GridItemsLayout Span="2" Orientation="Vertical"/>
+			</CollectionView.ItemsLayout>-->
+			<CollectionView.ItemTemplate>
+				<DataTemplate>
+					<HorizontalStackLayout Margin="5" BackgroundColor="DarkSlateGrey" CompressedLayout.IsHeadless="True">
+						<Frame VerticalOptions="CenterAndExpand" HorizontalOptions="Start" IsClippedToBounds="True" HasShadow="False" WidthRequest="100" HeightRequest="50" MinimumWidthRequest="50" CornerRadius="10">
+							<Image Source="{Binding ., Converter={StaticResource ToImage}}" Aspect="AspectFit" WidthRequest="40" HeightRequest="40"/>
+						</Frame>
+						<Label Text="{Binding Title}"/>
+					</HorizontalStackLayout>
+				</DataTemplate>
+			</CollectionView.ItemTemplate>
+		</CollectionView>
+		<CollectionView ItemsSource="{Binding NumbersArray}" VerticalOptions="FillAndExpand" Grid.Column="1">
+			<!--<CollectionView.ItemsLayout>
+				<GridItemsLayout Span="2" Orientation="Vertical"/>
+			</CollectionView.ItemsLayout>-->
+			<CollectionView.ItemTemplate>
+				<DataTemplate>
+					<HorizontalStackLayout Margin="5" BackgroundColor="DarkSlateGrey" CompressedLayout.IsHeadless="True">
+						<Frame VerticalOptions="CenterAndExpand" HorizontalOptions="Start" IsClippedToBounds="True" HasShadow="False" WidthRequest="100" HeightRequest="50" MinimumWidthRequest="50" CornerRadius="10">
+							<Image Source="{Binding ., Converter={StaticResource ToImage}}" Aspect="AspectFit" WidthRequest="40" HeightRequest="40"/>
+						</Frame>
+						<Label Text="{Binding Title}"/>
+					</HorizontalStackLayout>
+				</DataTemplate>
+			</CollectionView.ItemTemplate>
+		</CollectionView>
+	</Grid>
+</ContentPage>

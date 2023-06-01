@@ -231,10 +231,18 @@
 
 	</TabBar>
      -->
+	
+	<ShellContent Route="numbers"
+                  Title="Numbers Page"
+                  Icon="popup.png"
+                  ContentTemplate="{DataTemplate views:NumbersList}" />
+
 	<MenuItem Text="Help"
               IconImageSource="help.png"
               Command="{Binding HelpCommand}"
               CommandParameter="https://docs.microsoft.com/dotnet/maui/fundamentals/shell" />
+
+
 
 	<ShellContent Route="about"
                   Style="{StaticResource AboutShell}"

@@ -4,11 +4,11 @@
              x:Class="Xaminals.Views.TilePage"
              Title="TilePage">
 
-	<CollectionView x:Name="ItemsCollectionView" ItemsSource="{Binding Items}" VerticalScrollBarVisibility="Always" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+	<CollectionView x:Name="ItemsCollectionView" ItemsSource="{Binding Items}" VerticalScrollBarVisibility="Always" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ItemSizingStrategy="MeasureAllItems">
 		<CollectionView.ItemTemplate>
 			<DataTemplate>
 				<VerticalStackLayout VerticalOptions="FillAndExpand" x:Name="ItemContainer">
-					<Frame HeightRequest="{Binding Source={RelativeSource Self}, Path=Width}" HasShadow="False">
+					<Frame HeightRequest="200" HasShadow="False">
 						<Image Source="{Binding Image, Mode=OneWay}" HorizontalOptions="FillAndExpand"  Aspect="AspectFit"/>
 					</Frame>
 					<Label Text="{Binding Name}" LineBreakMode="WordWrap" HorizontalOptions="CenterAndExpand"/>
@@ -17,7 +17,7 @@
 			</DataTemplate>
 		</CollectionView.ItemTemplate>
 		<CollectionView.ItemsLayout>
-			<GridItemsLayout Orientation="Vertical" Span="2"/>
+			<GridItemsLayout Orientation="Vertical" Span="3"/>
 		</CollectionView.ItemsLayout>
 	</CollectionView>
 </ContentPage>

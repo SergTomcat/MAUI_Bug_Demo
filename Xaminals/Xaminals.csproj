@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net6.0-android;net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
-		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net6.0-windows10.0.19041.0</TargetFrameworks>
+		<TargetFrameworks>net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
 		<OutputType>Exe</OutputType>
@@ -58,8 +58,10 @@
 	  <None Remove="Resources\Images\help.png" />
 	  <None Remove="Resources\Images\info.png" />
 	  <None Remove="Resources\Images\monkey.png" />
+	  <None Remove="Resources\Images\no_image.png" />
 	  <None Remove="Resources\Images\paw.png" />
 	  <None Remove="Resources\Images\photo.jpg" />
+	  <None Remove="Resources\Images\popup.svg" />
 	  <None Remove="Resources\Images\random.png" />
 	  <None Remove="Resources\Images\tile.svg" />
 	  <None Remove="Resources\Images\xamarinstore.jpg" />
@@ -112,6 +114,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\GeneralAnimalPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\NumbersList.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\TilePage.xaml">

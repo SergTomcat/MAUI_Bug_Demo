@@ -2,14 +2,13 @@
 using Xaminals.Views;
 using System.Linq;
 using System.Collections.Generic;
-
 namespace Xaminals;
 
 public partial class AppShell : Shell
 {
     public Dictionary<string, Type> Routes { get; private set; } = new Dictionary<string, Type>();
     public ICommand HelpCommand => new Command<string>(async (url) => await Launcher.OpenAsync(url));
-
+   
 	public AppShell()
 	{
 		InitializeComponent();
