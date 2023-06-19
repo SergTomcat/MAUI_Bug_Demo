@@ -15,6 +15,7 @@ public partial class AppShell : Shell
 		RegisterRoutes();
 		BindingContext = this;
 
+
 	}
 
     void RegisterRoutes()

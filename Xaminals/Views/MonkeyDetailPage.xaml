@@ -10,7 +10,11 @@
                             BindingContext="{Binding Source={x:Reference self}, Path=BindingContext}"
                             IconOverride="back.png" />   
     </Shell.BackButtonBehavior>-->
-   
+
+	<ContentPage.ToolbarItems>
+		<ToolbarItem IconImageSource="bug"/>
+	</ContentPage.ToolbarItems>
+
     <ScrollView>
         <StackLayout Margin="20">
             <Label Text="{Binding Monkey.Name}" 

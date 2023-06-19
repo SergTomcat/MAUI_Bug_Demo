@@ -57,6 +57,7 @@
         </Style>
     </Shell.Resources>
 
+	
     <Shell.FlyoutHeader>
         <controls:FlyoutHeader />
     </Shell.FlyoutHeader>
