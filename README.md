@@ -10,6 +10,11 @@ products:
 urlFragment: fundamentals-shell
 ---
 
+# iOS svg color bug and png resizebug
+
+Side menu -> "Monkeys" -> Any monkey entry
+
+
 # Shell.TabBarIsVisible="False" bug
 
 Sample of code where Shell.TabBarIsVisible="False" is ignored.
